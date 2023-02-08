@@ -8,13 +8,9 @@ import AdminJSSequelize from "@adminjs/sequelize";
 import express from "express";
 
 import UsuarioResource from "./resources/UsuarioResource";
-import CaracterizacaoResource from "./resources/CaracterizacaoResource";
-import ClassificacaoResource from "./resources/ClassificacaoResource";
-import PatrocinadorResource from "./resources/PatrocinadorResource";
-import SubclassificacaoResource from "./resources/SubclassificacaoResource";
-import CaracterizacaoImagemResource from "./resources/CaracterizacaoImagemResource";
-import PatrocinadorImagemResource from "./resources/PatrocionadorImagemResource";
-
+import ProdutoResource from "./resources/ProdutoResource"
+import LocalizacaoResource from "./resources/LocalizacaoResource";
+import Produto_LocalizacaoResource from "./resources/Produto_LocalizacaoResource";
 import { password } from "./config/database";
 
 AdminJS.registerAdapter(AdminJSSequelize);
@@ -24,9 +20,9 @@ const app = express();
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [UsuarioResource, CaracterizacaoResource, ClassificacaoResource, PatrocinadorResource, SubclassificacaoResource, CaracterizacaoImagemResource,PatrocinadorImagemResource ],
+    resources: [UsuarioResource,ProdutoResource,LocalizacaoResource,Produto_LocalizacaoResource],
     branding: {
-        companyName: 'Doutor Fundição',
+        companyName: 'IPP-CONSULTORIA',
         logo: false,
         softwareBrothers: false
     },

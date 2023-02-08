@@ -1,18 +1,19 @@
 import Sequelize, {Model} from "sequelize";
 import {createPasswordHash, checkPassword1} from '../services/auth'
 
-class Classificacao extends Model {
+class Produto extends Model {
   static init (sequelize) {
     super.init(
           {
+          name: Sequelize.STRING,
           codigo: Sequelize.STRING,
-          name: Sequelize.STRING,                  
+          codigo_barras: Sequelize.STRING,
           }, 
           {
             sequelize,
-            modelName: 'classificacao',
+            modelName: 'produto',
             freezeTableName: true
-          },        
+          },    
     );
   }
 
@@ -21,5 +22,5 @@ class Classificacao extends Model {
   }
 }
 
-export default Classificacao;
+export default Produto;
   

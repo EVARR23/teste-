@@ -1,40 +1,39 @@
 import AdminJS from "adminjs";
 
-import Patrocinador from "../models/patrocinador";
+import Produto_Localizacao from "../models/produto_localizacao";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: Patrocinador,
+    resource: Produto_Localizacao,
     options: {
         parent: {
-            icon: "Patrocinador",
+            icon: "Produto_Localizacao",
         },
         properties: {
             id: {
                 position: 1,
             },
-            imagem: {
+            id_localizacao: {
                 position: 2,
                 isRequired: true,
             },
-            descricao: {
-                position: 2,
+            id_produto: {
+                position: 3,
+                isRequired: true,
+            },
+            quantidade: {
+                position: 4,
                 isRequired: true,
             },
             createAt:{
-                position: 3,
+                position: 5,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
             updateAt:{
-                position: 4,
+                position: 6,
                 isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-           
-           
-            initials: {
-                isVisible: false
-            },            
+            }         
         }
     }
 }

@@ -1,20 +1,18 @@
 import Sequelize, {Model} from "sequelize";
 import {createPasswordHash, checkPassword1} from '../services/auth'
 
-class Patrocinador extends Model {
+class Localizacao extends Model {
   static init (sequelize) {
     super.init(
           {
-          descricao: Sequelize.STRING,
-          descricao: Sequelize.STRING,
-          imagem: Sequelize.STRING,
           
+          name: Sequelize.STRING,                  
           }, 
           {
             sequelize,
-            modelName: 'patrocinador',
+            modelName: 'localizacao',
             freezeTableName: true
-          },            
+          },        
     );
   }
 
@@ -23,5 +21,5 @@ class Patrocinador extends Model {
   }
 }
 
-export default Patrocinador;
+export default Localizacao;
   

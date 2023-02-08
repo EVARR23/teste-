@@ -3,14 +3,11 @@ import  Sequelize from "sequelize";
 import config from '../config/database';
 
 import Usuario from "../models/usuario";
-import Caracterizacao from "../models/caracterizacao";
-import Classificacao from "../models/classificacao";
-import Patrocinador from "../models/patrocinador";
-import Subclassificacao from "../models/subclassificacao";
-import CaracterizacaoImagem from "../models/caracterizacaoImagem";
-import PatrocinadorImagem from "../models/patrocinadorImagem"
+import Produto from "../models/produto";
+import Localizacao from "../models/localizacao";
+import Produto_Localizacao from "../models/produto_localizacao";
 
-const models = [Usuario, Caracterizacao, Classificacao, Patrocinador, Subclassificacao, CaracterizacaoImagem, PatrocinadorImagem];
+const models = [Usuario,Produto,Localizacao,Produto_Localizacao];
 
 class Database {
   constructor() {

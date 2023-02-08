@@ -41,4 +41,7 @@ UPDATE public.classificacaos
 	INSERT INTO "patrocinadors" ("id","descricao","imagem","created_at","updated_at")
 VALUES (DEFAULT, 'deste', 'dd', now(), now())
 
-nextval('imagempatrocionador_id_seq'::regclass)
+nextval('produto_localizacao_id_seq'::regclass)
+
+created_at
+updated_at

@@ -1,39 +1,39 @@
 import AdminJS from "adminjs";
 
-import Caracterizacao from "../models/caracterizacao";
+import Produto from "../models/produto";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: Caracterizacao,
+    resource: Produto,
     options: {
         parent: {
-            icon: "User",
+            icon: "Produto",
         },
         properties: {
             id: {
                 position: 1,
             },
-            id_subclassificacao: {
-                position: 2,
-            },  
             name: {
+                position: 2,
+                isRequired: true,
+            },
+            codigo: {
                 position: 3,
                 isRequired: true,
-            },            
-            codigo: {
+            },
+           codigo_barras: {
                 position: 4,
                 isRequired: true,
             },
-            tipo: {
+            createAt:{
                 position: 5,
-                isRequired: true,
+                isVisible: { list: true, filter: true, show: true, edit: false}
             },
-            descricao: {
+            updateAt:{
                 position: 6,
-                isVisible: { list: false, filter: false, show: true, edit: true },
-                type: "richtext"
-            },                     
+                isVisible: { list: true, filter: true, show: true, edit: false}
+            }           
         }
     }
 }
