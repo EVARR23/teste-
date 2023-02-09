@@ -20,6 +20,7 @@ integer,status:enum,user_id:integer,project_id:integer
 15: yarn add lodash
 16: yarn add bcryptjs cookie-parser express-
 17: npx sequelize-cli seed:generate --name.create-users
+18: git config --list
 
 
 npx sequelize-cli model:generate --name Timesheet --attributes inicio:Date, fim:Date
@@ -44,4 +45,9 @@ VALUES (DEFAULT, 'deste', 'dd', now(), now())
 nextval('produto_localizacao_id_seq'::regclass)
 
 created_at
-updated_at
+
+
+git remote set-url origin https://github.com/genapps/inventario_panel.git
+git remote add origin https://github.com/genapps/inventario_panel.git
+
+

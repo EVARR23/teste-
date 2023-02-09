@@ -3,11 +3,9 @@ import  Sequelize from "sequelize";
 import config from '../config/database';
 
 import Usuario from "../models/usuario";
-import Produto from "../models/produto";
-import Localizacao from "../models/localizacao";
-import Produto_Localizacao from "../models/produto_localizacao";
 
-const models = [Usuario,Produto,Localizacao,Produto_Localizacao];
+
+const models = [Usuario,];
 
 class Database {
   constructor() {
